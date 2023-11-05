@@ -25,7 +25,8 @@ public class ProductServices {
 
    public Product addCar(String carName,String model,String color,int userId){
       Product Carinfo =  new Product(carName,model,color,userId);
-      return proRepo.save(Carinfo);
+      proRepo.save(Carinfo);
+      return Carinfo;
    }
     public String deleteCar(int carId){
             proRepo.deleteById(carId);
